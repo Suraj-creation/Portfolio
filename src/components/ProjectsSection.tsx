@@ -61,12 +61,12 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Portfolio Optimization Platform',
-    description: 'Full-stack portfolio optimization system applying Modern Portfolio Theory (Markowitz) with NSE India data.',
-    longDescription: '15.6% Sharpe Ratio improvement, Monte Carlo simulations, AI-powered insights via Gemini API.',
+    title: 'Excel-Themed Portfolio Dashboard',
+    description: 'Advanced Modern Portfolio Theory (MPT) implementation with SLSQP optimization achieving 42.58% expected return and 1.377 Sharpe Ratio on NSE India stocks.',
+    longDescription: '📈 15.6% Sharpe Ratio improvement • 8 NSE Assets (M&M, Adani Power, Vedanta, Bharti Airtel, NTPC) • Monte Carlo simulations • AI insights with 92% confidence via Gemini 1.5 Pro',
     image: '/projects/portfolio.png',
-    tags: ['FinTech', 'Data Science', 'Optimization', 'AI'],
-    tech: ['Python', 'Plotly.js', 'Tailwind CSS', 'Google Gemini', 'Yahoo Finance'],
+    tags: ['FinTech', 'Quantitative Finance', 'MPT', 'AI', 'Optimization'],
+    tech: ['Python', 'pandas', 'NumPy', 'scipy.optimize', 'Plotly.js', 'ECharts', 'Google Gemini 1.5 Pro', 'Yahoo Finance API'],
     github: 'https://github.com/Suraj-creation/Portfolio_finance_Optimal',
     demo: 'https://portfolio-finance-optimal.vercel.app/',
     stats: { stars: 0, forks: 0 },
@@ -74,6 +74,7 @@ const projects = [
     category: 'Finance',
     color: 'from-accent-green to-emerald-500',
     icon: TrendingUp,
+    highlights: ['42.58% Expected Return', '1.377 Sharpe Ratio', '8 NSE Assets', '92% AI Confidence'],
   },
   {
     id: 5,
@@ -346,6 +347,18 @@ export default function ProjectsSection() {
                       >
                         {project.longDescription}
                       </motion.p>
+
+                      {/* Highlights Grid (for projects with metrics) */}
+                      {'highlights' in project && project.highlights && (
+                        <div className="grid grid-cols-2 gap-2 mb-4">
+                          {(project.highlights as string[]).map((highlight, i) => (
+                            <div key={i} className="flex items-center gap-2 text-xs">
+                              <span className="w-1.5 h-1.5 rounded-full bg-accent-green"></span>
+                              <span className="text-gray-300">{highlight}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-6">

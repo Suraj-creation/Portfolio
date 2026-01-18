@@ -5,7 +5,8 @@ import { useRef, useState } from 'react'
 import { 
   Code2, ExternalLink, Github, Star, GitFork, 
   Brain, Database, Globe, Cpu, Heart, 
-  TrendingUp, Zap, Eye, ChevronRight, Filter
+  TrendingUp, Zap, Eye, ChevronRight, Filter,
+  BarChart3, LineChart, PieChart, Wallet
 } from 'lucide-react'
 
 // Project data from your repository
@@ -138,9 +139,89 @@ const projects = [
     color: 'from-red-500 to-orange-500',
     icon: Brain,
   },
+  {
+    id: 9,
+    title: 'Finance Portfolio Analysis',
+    description: 'Comprehensive financial portfolio analysis platform for investment research and stock market analysis.',
+    longDescription: 'Technical analysis, fundamental metrics, portfolio tracking, and performance visualization for informed investment decisions.',
+    image: '/projects/finance-portfolio.png',
+    tags: ['FinTech', 'Investment', 'Data Analysis', 'Research'],
+    tech: ['Python', 'Jupyter Notebook', 'pandas', 'NumPy', 'Matplotlib'],
+    github: 'https://github.com/Suraj-creation/Finance_Portfolio_',
+    demo: null,
+    stats: { stars: 0, forks: 0 },
+    featured: false,
+    category: 'Finance',
+    color: 'from-emerald-500 to-teal-500',
+    icon: BarChart3,
+  },
+  {
+    id: 10,
+    title: 'Kaynes Technology Analysis',
+    description: 'In-depth financial analysis of Kaynes Technology with quantitative modeling and investment insights.',
+    longDescription: 'Equity research, DCF valuation, technical indicators, and growth projection models for Kaynes Technology stock.',
+    image: '/projects/kaynes.png',
+    tags: ['FinTech', 'Equity Research', 'Valuation', 'Analysis'],
+    tech: ['Python', 'Jupyter Notebook', 'pandas', 'yfinance', 'Plotly'],
+    github: 'https://github.com/Suraj-creation/Kaynes_finance',
+    demo: null,
+    stats: { stars: 0, forks: 0 },
+    featured: false,
+    category: 'Finance',
+    color: 'from-blue-500 to-indigo-500',
+    icon: LineChart,
+  },
+  {
+    id: 11,
+    title: 'Advanced Kaynes Finance',
+    description: 'Enhanced financial modeling for Kaynes Technology with advanced quantitative techniques and ML predictions.',
+    longDescription: 'Extended version with machine learning price predictions, sentiment analysis, and risk metrics for comprehensive stock evaluation.',
+    image: '/projects/kaynes2.png',
+    tags: ['FinTech', 'ML', 'Quantitative', 'Prediction'],
+    tech: ['Python', 'Jupyter Notebook', 'scikit-learn', 'TensorFlow', 'Plotly'],
+    github: 'https://github.com/Suraj-creation/Kyanes_finance2',
+    demo: null,
+    stats: { stars: 0, forks: 0 },
+    featured: false,
+    category: 'Finance',
+    color: 'from-violet-500 to-purple-500',
+    icon: PieChart,
+  },
+  {
+    id: 12,
+    title: 'Stock Market Finance Hub',
+    description: 'Multi-asset financial analysis dashboard for NSE stocks with real-time data and portfolio insights.',
+    longDescription: 'Aggregated financial research platform covering multiple NSE stocks with comparative analysis and sector-wise performance tracking.',
+    image: '/projects/finance-hub.png',
+    tags: ['FinTech', 'Dashboard', 'NSE', 'Multi-Asset'],
+    tech: ['Python', 'Jupyter Notebook', 'pandas', 'NSE APIs', 'Bokeh'],
+    github: 'https://github.com/Suraj-creation/Portfolio_finance',
+    demo: null,
+    stats: { stars: 0, forks: 0 },
+    featured: false,
+    category: 'Finance',
+    color: 'from-amber-500 to-yellow-500',
+    icon: Wallet,
+  },
+  {
+    id: 13,
+    title: 'Financial Statement Analyzer',
+    description: 'Automated financial statement analysis tool for fundamental analysis and company valuation.',
+    longDescription: 'Ratio analysis, trend identification, peer comparison, and automated report generation for equity research.',
+    image: '/projects/finance-analysis.png',
+    tags: ['FinTech', 'Fundamental Analysis', 'Automation', 'Reports'],
+    tech: ['Python', 'Jupyter Notebook', 'pandas', 'openpyxl', 'ReportLab'],
+    github: 'https://github.com/Suraj-creation/Finance_analysis',
+    demo: null,
+    stats: { stars: 0, forks: 0 },
+    featured: false,
+    category: 'Finance',
+    color: 'from-cyan-500 to-sky-500',
+    icon: TrendingUp,
+  },
 ]
 
-const categories = ['All', 'AI/ML', 'Healthcare', 'Finance', 'EdTech', 'Tools', 'Social Impact']
+const categories = ['All', 'AI/ML', 'Healthcare', 'Finance', 'FinTech', 'EdTech', 'Tools', 'Social Impact']
 
 export default function ProjectsSection() {
   const ref = useRef(null)
